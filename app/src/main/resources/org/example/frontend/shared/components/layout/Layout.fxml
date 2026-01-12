@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.frontend.routes.MainController" stylesheets="/org/example/frontend/shared/components/layout/Layout.css">
+    <top>
+        <VBox styleClass="header">
+            <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-padding: 15;">
+                <Label text="javafx_template" styleClass="title"/>
+                <HBox HBox.hgrow="ALWAYS" alignment="CENTER_RIGHT" spacing="10">
+                    <Button text="Home" onAction="#showHome" styleClass="nav-button"/>
+                    <Button text="Dashboard" onAction="#showDashboard" styleClass="nav-button"/>
+                </HBox>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #f5f5f5;">
+            <!-- Dynamic content will be loaded here -->
+        </StackPane>
+    </center>
+    
+    <bottom>
+        <HBox styleClass="footer" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="© 2026 javafx_template"/>
+        </HBox>
+    </bottom>
+</BorderPane>

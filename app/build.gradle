@@ -9,6 +9,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 repositories {
@@ -16,9 +17,30 @@ repositories {
     mavenCentral()
 }
 
+javafx {
+    version = '21'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
+
 dependencies {
     // This dependency is used by the application.
     implementation libs.guava
+    
+    // FxmlKit for FXML hot-reload and convention-over-configuration
+    implementation 'com.dlsc.fxmlkit:fxmlkit:1.5.0'
+}
+
+// Disable FxmlKit auto-generation of empty files
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += ['-Afx.disable.autogeneration=true']
+}
+
+// Configure JavaExec tasks for JavaFX
+tasks.withType(JavaExec).configureEach {
+    // Configure JVM args at configuration time
+    jvmArgs += [
+        '--add-modules', 'javafx.controls,javafx.fxml,javafx.graphics'
+    ]
 }
 
 testing {
@@ -40,5 +62,5 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.example.App'
+    mainClass = 'org.example.backend.App'
 }

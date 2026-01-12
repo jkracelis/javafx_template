@@ -3,6 +3,10 @@
 
 [versions]
 guava = "33.4.6-jre"
+javafx = "21"
 
 [libraries]
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
+javafx-controls = { module = "org.openjfx:javafx-controls", version.ref = "javafx" }
+javafx-fxml = { module = "org.openjfx:javafx-fxml", version.ref = "javafx" }
+javafx-graphics = { module = "org.openjfx:javafx-graphics", version.ref = "javafx" }

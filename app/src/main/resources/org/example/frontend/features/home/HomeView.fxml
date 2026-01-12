@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.frontend.features.home.HomeController" spacing="30" alignment="CENTER" style="-fx-padding: 50;">
+    <Label text="Welcome to javafx_template" styleClass="section-title"/>
+    
+    <VBox spacing="20" alignment="CENTER">
+        <Button text="Go to Dashboard" onAction="#showDashboard" styleClass="primary-button" prefWidth="200"/>
+    </VBox>
+    
+</VBox>
