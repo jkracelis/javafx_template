@@ -163,10 +163,6 @@ Test reports are generated in:
 3. Update documentation for API changes
 4. Use feature-based architecture for new functionality
 
-## 📄 License
-
-This project is provided as a template for JavaFX applications.
-
 ---
 
 **Built with ❤️ using JavaFX 21 and Gradle 9.2.1**
